@@ -6,7 +6,7 @@ import { validationResult } from 'express-validator';
 // Public
 const getTasks = async (req, res) => {
   try {
-    const tasks = await Task.find().sort('-createdAt');
+    const tasks = await Task.find().sort({ order: 1 });
     res.status(200).json({
       success: true,
       count: tasks.length,
