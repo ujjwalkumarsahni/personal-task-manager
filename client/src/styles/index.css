@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0B2248;
+  --color-secondary: #E38A0A;
+  --color-danger: #DB2112;
+  --color-background: #F7F7F7;
+}
+
+@utility btn-primary {
+  @apply bg-primary text-white px-4 py-2 rounded-lg transition-all duration-200;
+}
+
+@utility btn-secondary {
+  @apply bg-secondary text-white px-4 py-2 rounded-lg transition-all duration-200;
+}
+
+@utility btn-danger {
+  @apply bg-danger text-white px-4 py-2 rounded-lg transition-all duration-200;
+}
+
+@utility card {
+  @apply bg-white rounded-xl shadow-sm border p-4;
+}
+
+@utility input-field {
+  @apply w-full border rounded-lg px-3 py-2 outline-none;
+}
+
+@layer base {
+  body {
+    @apply bg-background min-h-screen font-sans;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-200 rounded;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-2.5 rounded-lg 
+            transition-all duration-200 
+           shadow-md hover:shadow-lg font-medium
+           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white px-4 py-2 rounded-lg 
+            transition-all duration-200 font-medium
+           focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+  }
+  
+  .btn-danger {
+    @apply bg-danger text-white px-4 py-2 rounded-lg 
+            transition-all duration-200 font-medium
+           focus:outline-none focus:ring-2 focus:ring-danger focus:ring-offset-2;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-4 py-2 rounded-lg 
+           hover:bg-primary hover:text-white transition-all duration-200 font-medium;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-2.5 border border-gray-300 rounded-lg 
+           focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent
+           transition-all duration-200 bg-white;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+  
+  .badge {
+    @apply px-2 py-1 text-xs font-semibold rounded-full;
+  }
+  
+  .badge-primary {
+    @apply bg-primary text-primary;
+  }
+  
+  .badge-secondary {
+    @apply bg-secondary text-secondary;
+  }
+  
+  .badge-danger {
+    @apply bg-danger text-danger;
+  }
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+/* Custom scrollbar for modal */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
