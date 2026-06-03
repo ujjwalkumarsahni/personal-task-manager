@@ -10,7 +10,7 @@ A modern full-stack task management application built with React, Node.js, Expre
 ### Frontend
 
 ```bash
-https://personal-task-manager-frontend-g3bb.onrender.com
+https://personal-task-manager-ui.onrender.com
 ```
 
 ### Backend API
