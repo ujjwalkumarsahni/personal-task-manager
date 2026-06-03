@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="./client/screenshots/main.png" alt="Personal Task Manager Banner" width="100%">
-</p>
+
 # Personal Task Manager
 
 A modern full-stack task management application built with React, Node.js, Express, and MongoDB. This project was developed as part of the **Studio Graphene Full Stack Developer Assessment (Exercise 1 - Personal Task Manager)**. The application allows users to create, manage, organize, and track personal tasks efficiently with a clean and responsive user interface. It supports task creation, editing, deletion, filtering, searching, drag-and-drop reordering, overdue task highlighting, and real-time task statistics. 
@@ -12,18 +10,18 @@ A modern full-stack task management application built with React, Node.js, Expre
 ### Frontend
 
 ```bash
-https://your-frontend-url.vercel.app
+https://personal-task-manager-frontend-g3bb.onrender.com
 ```
 
 ### Backend API
 
 ```bash
-https://your-backend-url.onrender.com
+https://personal-task-manager-backend-gypf.onrender.com
 ```
 
 ---
 
-# 📸 Application Preview
+# Application Preview
 
 ## Main Dashboard
 
@@ -54,14 +52,6 @@ Existing tasks can be updated seamlessly through an intuitive edit modal.
 A confirmation dialog prevents accidental task deletion and improves user experience.
 
 ![Delete Task](./client/screenshots/deleteTask.png)
-
----
-
-## Mobile Responsive Design
-
-The application is fully responsive and optimized for mobile, tablet, and desktop devices.
-
-![Mobile Responsive](./client/screenshots/mobileResponsive.png)
 
 ---
 
