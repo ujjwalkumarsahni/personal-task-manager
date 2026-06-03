@@ -398,16 +398,78 @@ PATCH /api/tasks/:id/toggle
 ```http
 DELETE /api/tasks/:id
 ```
+## 6. Get Single Task
+
+### Request
+
+```http
+GET /api/tasks/:id
+```
+
+### Response
+
+```json
+{
+  "_id": "665a12345",
+  "title": "Complete Assignment",
+  "description": "Finish Studio Graphene Assessment",
+  "dueDate": "2026-06-10",
+  "completed": false,
+  "order": 1,
+  "createdAt": "2026-06-05T10:00:00Z",
+  "updatedAt": "2026-06-05T10:00:00Z"
+}
+```
+---
+
+## 7. Get Task Statistics
+
+### Request
+
+```http
+GET /api/tasks/stats
+```
+
+### Response
+
+```json
+{
+  "totalTasks": 15,
+  "activeTasks": 9,
+  "completedTasks": 6,
+  "overdueTasks": 2
+}
+```
+---
+
+## 8. Update Task Order (Drag & Drop)
+
+### Request
+
+```http
+PATCH /api/tasks/:id/order
+```
+
+### Body
+
+```json
+{
+  "order": 3
+}
+```
 
 ### Response
 
 ```json
 {
   "success": true,
-  "message": "Task deleted successfully"
+  "message": "Task order updated successfully",
+  "task": {
+    "_id": "665a12345",
+    "order": 3
+  }
 }
 ```
-
 ---
 
 # Testing Checklist
